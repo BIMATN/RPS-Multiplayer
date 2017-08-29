@@ -23,40 +23,58 @@
   </script>
 </head>
 <body>
-	<br>
 	<div class="container">
+	<br>
+		<div class="card">
+		  <div class="card-body bg-warning" style="border: 2px solid red;">
+		    <h1 class="card-title text-center">Rock Paper Scissors With Friends</h1>
+		  </div>
+		</div>
 		<br>
-		<div class="jumbotron"><h1 class="text-center">Rock Paper Scissors</h1></div>
 		<div class="row">
-			<div class="col-6">
+			<div class="col-4" style="border: 2px solid blue;">
 				<div class="card mx-auto" style="width: 20rem;">
 				  <img class="card-img-top" src="assets/images/rps-howto.png" alt="rules of the game">
 				  <div class="card-body">
 				    <h4 class="card-title text-center">Choose Your Weapon</h4>
-				    <p class="card-text text-center">Player 1 Name</p>
+				    <p class="card-text text-center" id="p1Name">Player 1 Name</p>
 				  </div>
-				  <ul class="list-group list-group-flush">
-				    <li class="list-group-item">Wins: </li>
-				    <li class="list-group-item">Losses: </li>
-				    <li class="list-group-item">Ties: </li>
+				  <ul class="list-group list-group-flush" style="color:white;">
+				    <li class="list-group-item bg-success">Wins: </li>
+				    <li class="list-group-item bg-danger">Losses: </li>
+				    <li class="list-group-item bg-primary">Ties: </li>
 				  </ul>
 				</div>
 			</div>
-			<div class="col-6">
+			<div class="col-4" style="border: 2px solid blue;">
+				<div class="card">
+					<h2 class="text-center">Chat Room</h2>
+					<div class="form-group">
+					    <label for="exampleFormControlTextarea1"></label>
+					    <textarea class="form-control" id="exampleFormControlTextarea1" rows="5"></textarea>
+					</div>
+					<div class="form-group">
+					    <label for="exampleFormControlTextarea1"></label>
+					    <textarea class="form-control" id="exampleFormControlTextarea1" rows="1"></textarea>
+					</div>
+				</div>
+			</div>
+			<div class="col-4" style="border: 2px solid blue;">
 				<div class="card mx-auto" style="width: 20rem;">
 				  <img class="card-img-top" src="assets/images/rps-howto.png" alt="rules of the game">
 				  <div class="card-body">
 				    <h4 class="card-title text-center">Waiting for Opponent</h4>
-				    <p class="card-text text-center">Player 2 Name</p>
+				    <p class="card-text text-center" id="p2Name">Player 2 Name</p>
 				  </div>
-				  <ul class="list-group list-group-flush">
-				    <li class="list-group-item">Wins: </li>
-				    <li class="list-group-item">Losses: </li>
-				    <li class="list-group-item">Ties: </li>
+				  <ul class="list-group list-group-flush" style="color:white;">
+				    <li class="list-group-item bg-success">Wins: </li>
+				    <li class="list-group-item bg-danger">Losses: </li>
+				    <li class="list-group-item bg-primary">Ties: </li>
 				  </ul>
 				</div>
 			</div>
 		</div>
+		<br>
 	</div>
 </body>
 </html>
