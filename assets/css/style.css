@@ -1,0 +1,10 @@
+/* RPS-Multiplater CSS*/
+
+body {
+	background-image: url("../images/gaming-pattern.png") !important;
+}
+
+.container {
+	border: 5px solid green;
+	background-color: lightyellow;
+}

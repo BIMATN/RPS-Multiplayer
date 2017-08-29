@@ -6,6 +6,7 @@
   <title>RPS-Multiplayer</title>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><!--jquery-->
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous"><!--bootstrap v4-->
+  <link rel="stylesheet" href="assets/css/style.css"> <!--my css-->
   <script src="https://www.gstatic.com/firebasejs/4.3.0/firebase.js"></script>
   <script>
     // Initialize Firebase
@@ -22,10 +23,38 @@
   </script>
 </head>
 <body>
+	<br>
 	<div class="container">
+		<br>
+		<div class="jumbotron"><h1 class="text-center">Rock Paper Scissors</h1></div>
 		<div class="row">
-			<div col-12>
-				
+			<div class="col-6">
+				<div class="card mx-auto" style="width: 20rem;">
+				  <img class="card-img-top" src="assets/images/rps-howto.png" alt="rules of the game">
+				  <div class="card-body">
+				    <h4 class="card-title text-center">Choose Your Weapon</h4>
+				    <p class="card-text text-center">Player 1 Name</p>
+				  </div>
+				  <ul class="list-group list-group-flush">
+				    <li class="list-group-item">Wins: </li>
+				    <li class="list-group-item">Losses: </li>
+				    <li class="list-group-item">Ties: </li>
+				  </ul>
+				</div>
+			</div>
+			<div class="col-6">
+				<div class="card mx-auto" style="width: 20rem;">
+				  <img class="card-img-top" src="assets/images/rps-howto.png" alt="rules of the game">
+				  <div class="card-body">
+				    <h4 class="card-title text-center">Waiting for Opponent</h4>
+				    <p class="card-text text-center">Player 2 Name</p>
+				  </div>
+				  <ul class="list-group list-group-flush">
+				    <li class="list-group-item">Wins: </li>
+				    <li class="list-group-item">Losses: </li>
+				    <li class="list-group-item">Ties: </li>
+				  </ul>
+				</div>
 			</div>
 		</div>
 	</div>
