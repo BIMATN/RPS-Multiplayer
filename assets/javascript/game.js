@@ -52,19 +52,23 @@ $(document).on("click", "#start", function(){
 		database.ref('/player1').update({present :true}); //changes status of present to true because this user is now player1
 		//We now look for weapon choice from player1
 		player1Choice();
+		//this below will become function that runs tests for who won and updates player screens accordingly
 		database.ref('/player2/choice').on("value", function(){
 			if(player1.choice === player2.choice){
-				ties++;
-				database.ref('/player1').update({ties: ties});
+				player1.ties++;
+				player2.ties++;
+				database.ref('/player1').update({ties: player1.ties});
+				database.ref('/player2').update({ties: player2.ties});
 				$("#Ties").html("#Ties: "+player1.ties);
+				$("#opTies").html("#Ties: "+player2.ties);
 			}
 			else if(player1.choice === "rock" && player2.choice === "scissors"){
-				wins++;
-				database.ref('/player1').update({wins: wins});
+				player1.wins++;
+				database.ref('/player1').update({wins: player1.wins});
 				$("#Ties").html("#Wins: "+player1.wins);
 			}
 			else if(player1.choice === "rock" && player2.choice === "paper"){
-				losses++;
+				player1.losses++;
 				database.ref('/player1').update({wins: wins});
 				$("#Ties").html("#Wins: "+player1.wins);
 			}
