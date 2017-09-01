@@ -26,7 +26,6 @@ var database = firebase.database(); // declare variable to make using firebase d
 
 //function runs tests for who won and updates player screens accordingly, but only after the villain has made their choice
 function gamePlay (){
-	if(database.ref('/'+villainName+'/choice')==="rock"||database.ref('/'+villainName+'/choice')==="paper"||database.ref('/'+villainName+'/choice')==="scissors"){
 		console.log(player1.choice);
 		console.log(player2.choice);
 		if(player1.choice>0&&player2.choice>0&&player1.choice===player2.choice){
@@ -85,12 +84,6 @@ function gamePlay (){
 			$("#wins").html("Wins: "+player1.wins);
 			$("#opLosses").html("Losses: "+player2.losses);
 		}
-	}
-	else{
-		database.ref('/'+vilainName+'/choice').on("value", function(){
-			gamePlay();
-		})
-	}
 }
 
 //function for processing player choice
